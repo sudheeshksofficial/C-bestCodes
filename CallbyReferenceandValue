@@ -1,0 +1,33 @@
+using System;
+
+namespace generalLearning
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 30;
+            int b = a;
+             a = 45;  
+            //only value got passed so after b= a if i changed anything on a
+            //that doesnt affect b as the reference are different
+            Console.WriteLine("call by value valus : "+a+", "+b);
+            ReferenceClass refObj = new ReferenceClass();
+            ReferenceClass refObj2 = new ReferenceClass();
+
+            refObj.value = 25;
+            refObj2 = refObj;
+            refObj.value = 70;
+            refObj.value = 95;
+            //even though i didnt touched the refObj2.value the value got changed
+            //from 25 to 70 to 95 and the final result of value is 95
+            Console.WriteLine("call by ref refobj and refobj2 values are "+refObj.value +", "+refObj2.value);
+
+        }
+    }
+    public class ReferenceClass
+    {
+        public int value;
+
+    } 
+}
