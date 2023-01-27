@@ -1,0 +1,18 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        int myNum = 10;
+        ProcessNumber(ref myNum); //use ref to pass the parameter by reference
+        //which means the object reference itself passed
+           
+        Console.WriteLine(myNum); // thus output will be 100
+        //if we not used ref keyword then output might be 10 only
+        Console.ReadLine();
+    }
+ 
+    public static void ProcessNumber(ref int num)
+    {
+        num = 100;
+    }           
+}
