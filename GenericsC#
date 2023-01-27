@@ -1,0 +1,65 @@
+using System;
+
+namespace GenericsinCsharp
+{
+     class Program
+    {
+        static void Main(string[] args)
+        {
+            //here the type of variable used in the class are only declared here
+            //as int or string so it make type safe
+            Shuffler<int> sf = new Shuffler<int>();
+            sf.add(10);
+            sf.add(20);
+            sf.add(30);
+            sf.add(40);
+            sf.add(50);
+            sf.shuffle();
+            sf.print();
+            Console.WriteLine("***************");
+            Shuffler<string> st= new Shuffler<string>();
+            st.add("salomia");
+            st.add("sreeja");
+            st.add("hari");
+            st.shuffle();
+            st.print();
+        }
+    }
+    class Shuffler<T>
+    {
+    //here T is replaced by int or string as per type given in object declaration 
+    // or also say as per construction declaration
+    // for ref keyword check another program
+        T[] list = new T[100];
+        int pos = 0;
+        Random rnd = new Random();
+
+        public void add(T t)
+        {
+            list[pos++] = t;
+        }
+
+        public void shuffle()
+        {
+            for (int i = 0; i < pos; i++)
+            {
+                swap(ref list[i], ref list[rnd.Next(0, pos - 1)]);
+            }
+        }
+        public static void swap<T>(ref T t1, ref T t2)
+        {
+            T temp;
+            temp = t2;
+            t2 = t1;
+            t1 = temp;
+        }
+        public void print()
+        {
+            for (int i = 0; i < pos; i++)
+            {
+                Console.WriteLine("Element at " + i + ": " + list[i]);
+            }
+        }
+    }
+
+}
