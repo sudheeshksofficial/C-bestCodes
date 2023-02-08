@@ -1,7 +1,5 @@
 //here i only created derived class object and the base class 
-// variables might be accessible with that object itself
-
-
+// variables or methods can be accessible with that derived class object 
 
 public class Program
 {
@@ -10,11 +8,9 @@ public class Program
 		Employee emp = new Employee(); //derived class object
 		emp.FirstName = "Steve";
 		emp.LastName = "Jobs";
-		emp.EmployeeId = 1;
 		emp.CompanyName = "Apple";
 		
 		Console.WriteLine(emp.GetFullName()); //base class method
-		Console.WriteLine(emp.EmployeeId); 
 		Console.WriteLine(emp.CompanyName); 
 
 	}
@@ -24,8 +20,8 @@ class Person
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
-
-    public string GetFullName(){ 
+    public string GetFullName()
+    { 
         return FirstName + " " + LastName;
     }
 }
@@ -34,5 +30,37 @@ class Employee : Person
 {
     public int EmployeeId { get; set; }
     public string CompanyName { get; set; }
-    
 }
+==================================  base keyword ===========================
+//when you create constructor for derived class it will automatically call the base class constructor method
+// but if you want to call only parameterized constructor of base class and not unparameterized constructor then base is used
+public class Program
+{
+	public static void Main()
+	{
+		Employee emp = new Employee();
+	}
+}
+class Person
+{
+    public Person()  //because of the base keyword this constructor is not called 
+    {
+	    Console.WriteLine("Person Constructor");
+	}
+
+    public Person(string val)
+    {
+	    Console.WriteLine(val);
+	}
+}
+class Employee : Person
+{
+    public Employee() : base("Parameterized constructor of base class")
+    {
+	    Console.WriteLine("Employee Constructor");
+	}   
+}
+
+output:
+Parameterized constructor of base class
+Employee Constructor
