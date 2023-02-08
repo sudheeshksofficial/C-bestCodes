@@ -1,0 +1,38 @@
+//here i only created derived class object and the base class 
+// variables might be accessible with that object itself
+
+
+
+public class Program
+{
+	public static void Main()
+	{
+		Employee emp = new Employee(); //derived class object
+		emp.FirstName = "Steve";
+		emp.LastName = "Jobs";
+		emp.EmployeeId = 1;
+		emp.CompanyName = "Apple";
+		
+		Console.WriteLine(emp.GetFullName()); //base class method
+		Console.WriteLine(emp.EmployeeId); 
+		Console.WriteLine(emp.CompanyName); 
+
+	}
+}
+
+class Person
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+
+    public string GetFullName(){ 
+        return FirstName + " " + LastName;
+    }
+}
+
+class Employee : Person
+{
+    public int EmployeeId { get; set; }
+    public string CompanyName { get; set; }
+    
+}
