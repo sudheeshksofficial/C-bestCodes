@@ -1,0 +1,15 @@
+
+pwd current folder path
+git clone <repository path> === >  clone repo
+cd enterFolderName  ===> here enter the folder name which is greated after you clone the repo
+-------add any  txt or other files ---------------
+git add .  === > add all files to remote repository
+git commit -m "commit message"  ===>saving at remote
+git push origin <branch name>   ==>push to git from remote
+git pull origin <branch name>
+git branch === > list out all branch names
+git branch <new branch name>  ==> to create new branch in remote
+git checkout <branch name>
+git checkout <branch name>  == > to jump from one branch to another
+git checkout -b <branch name>  ==>will create new branch and jump to it same time
+git status ==> for checking status
