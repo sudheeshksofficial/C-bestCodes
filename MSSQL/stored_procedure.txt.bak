@@ -1,0 +1,15 @@
+MsSQL  ====>>>>>>>>>>>>>>>>>>
+
+Select query procedure
+
+create procedure [dbo].[sp_GetAllProducts]
+as
+begin
+
+	select ProductId,ProductName,Price,City,Remarls from dbo.tbl_ProductMaster with(nolock)
+	/*************      with no lock will work like async keyword       ************************/
+
+end
+GO
+
+
