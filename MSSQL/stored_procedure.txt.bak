@@ -1,5 +1,15 @@
 MsSQL  ====>>>>>>>>>>>>>>>>>>
 
+basic queries
+
+insert into dbo.tbl_ProductMaster (ProductName,Price,City,Remarls)values ('sudeesh',4.5,600012,'good');
+
+update dbo.tbl_ProductMaster set ProductName = 'savuk',Price=4.6,City='600011',Remarls=''  where ProductId = 3;
+
+
+delete dbo.tbl_ProductMaster where ProductId = 3;
+
+
 Select query procedure
 
 create procedure [dbo].[sp_GetAllProducts]
