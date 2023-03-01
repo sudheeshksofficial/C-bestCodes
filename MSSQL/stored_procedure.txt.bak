@@ -10,7 +10,7 @@ update dbo.tbl_ProductMaster set ProductName = 'savuk',Price=4.6,City='600011',R
 delete dbo.tbl_ProductMaster where ProductId = 3;
 
 
-Select query procedure
+select query stored procedure
 
 create procedure [dbo].[sp_GetAllProducts]
 as

@@ -9,6 +9,11 @@ update dbo.tbl_ProductMaster set ProductName = 'savuk',Price=4.6,City='600011',R
 
 delete dbo.tbl_ProductMaster where ProductId = 3;
 
+DECLARE is declaring the variable  >>>>>>>   DECLARE @number int
+
+SET is used to assign values in the declared variable 
+
+/*************************************************************************************/
 
 select query stored procedure
 
@@ -21,5 +26,7 @@ begin
 
 end
 GO
+
+/**************************************************************************************/
 
 
