@@ -1,0 +1,10 @@
+USE [AdoRevise]
+create procedure [dbo].[sp_GetAllProducts]
+as
+begin
+
+	select ProductId,ProductName,Price,City,Remarls from dbo.tbl_ProductMaster with(nolock)
+
+end
+GO
+

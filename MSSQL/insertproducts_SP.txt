@@ -1,0 +1,24 @@
+
+CREATE OR ALTER PROCEDURE [dbo].[sp_InsertProducts]
+(
+@ProductName nvarchar(50),
+@Price decimal(8,2),
+@City nvarchar(50),
+@Remarks nvarchar(50)
+)
+AS
+BEGIN
+	begin try
+			BEGIN TRAN
+				insert into dbo.tbl_ProductMaster(ProductName,Price,City,Remarls)
+				values (@ProductName,@Price,@City,@Remarks)
+			COMMIT TRAN
+	end try
+	begin catch
+			ROLLBACK TRAN
+				select ERROR_MESSAGE()
+	end catch
+	
+END
+GO
+

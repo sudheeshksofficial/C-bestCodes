@@ -1,0 +1,37 @@
+
+CREATE OR ALTER PROCEDURE [dbo].[sp_deleteProductById]
+(
+	@ProductId int,
+	@OUTPUTMESSAGE VARCHAR(50) OUTPUT
+)
+AS
+BEGIN
+
+declare @rowcount int =0;
+
+	begin try
+	set @rowcount = (select (1) from dbo.tbl_ProductMaster where ProductId = @ProductId);
+		if(@rowcount >0)
+		begin
+		begin tran
+
+			delete from [AdoRevise].[dbo].[tbl_ProductMaster]
+			where ProductId = @ProductId 
+
+			SET @OUTPUTMESSAGE = 'product deleted successfully.....!';
+
+		commit tran
+		end
+		else
+			begin
+				SET @OUTPUTMESSAGE = 'there is no product with the id !'+ Convert(varchar,@ProductId);
+			end
+	end try
+	begin catch
+		ROLLBACK TRAN;
+		SET @OUTPUTMESSAGE =  ERROR_MESSAGE();
+	end catch
+
+END
+GO
+

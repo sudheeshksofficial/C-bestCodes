@@ -1,0 +1,40 @@
+
+
+
+CREATE OR ALTER PROCEDURE [dbo].[sp_UpdateProducts]
+(
+@ProductID int,
+@ProductName nvarchar(50),
+@Price decimal(8,2),
+@City nvarchar(50),
+@Remarks nvarchar(50) = NULL
+)
+AS
+BEGIN
+DECLARE @RowCount int = 0
+
+	set @RowCount = (select count(1) from dbo.tbl_ProductMaster where ProductName = @ProductName and ProductId <> @ProductID )
+
+	begin try
+			BEGIN TRAN
+
+			if(@RowCount =0)
+				begin
+					update dbo.tbl_ProductMaster 
+					set 
+					ProductName = @ProductName ,
+					Price = @Price,
+					City = @City,
+					Remarls = @Remarks
+					where ProductId = @ProductID;
+				end
+			COMMIT TRAN
+	end try
+	begin catch
+			ROLLBACK TRAN
+				select ERROR_MESSAGE()
+	end catch
+	
+END
+GO
+

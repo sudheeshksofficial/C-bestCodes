@@ -1,0 +1,16 @@
+
+CREATE OR ALTER PROCEDURE [dbo].[sp_GetProductByID]
+(
+@ProductId int
+)
+AS
+BEGIN
+	SELECT ProductId
+			,[ProductName]
+			,[Price]
+			,[City]
+			,[Remarls]
+	FROM [AdoRevise].[dbo].[tbl_ProductMaster] WHERE ProductId = @ProductId;
+END
+GO
+
