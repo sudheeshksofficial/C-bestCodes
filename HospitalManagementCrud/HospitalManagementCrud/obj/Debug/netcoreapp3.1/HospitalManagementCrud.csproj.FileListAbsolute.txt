@@ -1,0 +1,14 @@
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\bin\Debug\netcoreapp3.1\HospitalManagementCrud.exe
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\bin\Debug\netcoreapp3.1\HospitalManagementCrud.deps.json
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\bin\Debug\netcoreapp3.1\HospitalManagementCrud.runtimeconfig.json
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\bin\Debug\netcoreapp3.1\HospitalManagementCrud.runtimeconfig.dev.json
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\bin\Debug\netcoreapp3.1\HospitalManagementCrud.dll
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\bin\Debug\netcoreapp3.1\HospitalManagementCrud.pdb
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.AssemblyInfo.cs
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.dll
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.pdb
+C:\Users\hp\Desktop\eduonixcoursec#\IrisFinalRecaps\HospitalManagementCrud\HospitalManagementCrud\obj\Debug\netcoreapp3.1\HospitalManagementCrud.genruntimeconfig.cache
